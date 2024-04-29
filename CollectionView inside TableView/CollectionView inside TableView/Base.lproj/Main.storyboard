@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionView_inside_TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="w92-IB-fVV">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableViewCell" rowHeight="239" id="u7l-vG-jXx" customClass="TableViewCell" customModule="CollectionView_inside_TableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="239"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u7l-vG-jXx" id="6gr-1w-sJn">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="239"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9d-59-CNp">
+                                                    <rect key="frame" x="30" y="21" width="330" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Nhw-aO-R0K">
+                                                    <rect key="frame" x="20" y="47" width="350" height="176"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZFV-7n-4on">
+                                                        <size key="itemSize" width="330" height="155"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="FNy-hk-pLz" customClass="CollectionViewCell" customModule="CollectionView_inside_TableView" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="10.666666666666666" width="330" height="155"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KOQ-9m-SyX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="155"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ac8-pC-3fX">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="155"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="ac8-pC-3fX" firstAttribute="leading" secondItem="KOQ-9m-SyX" secondAttribute="leading" id="6jO-U7-piW"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ac8-pC-3fX" secondAttribute="trailing" id="Vn2-g2-vMO"/>
+                                                                    <constraint firstItem="ac8-pC-3fX" firstAttribute="top" secondItem="KOQ-9m-SyX" secondAttribute="top" id="a9S-81-xs8"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ac8-pC-3fX" secondAttribute="bottom" id="ySP-Oe-0wm"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="330" height="155"/>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="ac8-pC-3fX" id="OWP-RX-I9a"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y9d-59-CNp" firstAttribute="leading" secondItem="6gr-1w-sJn" secondAttribute="leadingMargin" constant="10" id="6RV-ki-zQR"/>
+                                                <constraint firstItem="Nhw-aO-R0K" firstAttribute="leading" secondItem="6gr-1w-sJn" secondAttribute="leadingMargin" id="E5z-ka-80a"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Y9d-59-CNp" secondAttribute="trailing" constant="10" id="L3I-zP-FqU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Nhw-aO-R0K" secondAttribute="bottom" constant="5" id="a9f-kh-Aba"/>
+                                                <constraint firstItem="Y9d-59-CNp" firstAttribute="top" secondItem="6gr-1w-sJn" secondAttribute="topMargin" constant="10" id="cPT-kY-rt7"/>
+                                                <constraint firstItem="Nhw-aO-R0K" firstAttribute="trailing" secondItem="6gr-1w-sJn" secondAttribute="trailingMargin" id="uH7-bR-Mod"/>
+                                                <constraint firstItem="Nhw-aO-R0K" firstAttribute="top" secondItem="Y9d-59-CNp" secondAttribute="bottom" constant="5" id="uXb-P2-Xii"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="Nhw-aO-R0K" id="F5M-sB-B1E"/>
+                                            <outlet property="productNameLabel" destination="Y9d-59-CNp" id="Sqz-Oh-XuG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w92-IB-fVV" secondAttribute="bottom" id="8PG-aU-DiM"/>
+                            <constraint firstItem="w92-IB-fVV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="n51-Ig-Rl5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w92-IB-fVV" secondAttribute="trailing" id="nfI-03-tqN"/>
+                            <constraint firstItem="w92-IB-fVV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t9Y-hX-AWx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="w92-IB-fVV" id="6hh-SH-wtY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-760" y="-21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
